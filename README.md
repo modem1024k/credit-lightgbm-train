@@ -1,7 +1,8 @@
 # lightgbm训练个贷违约训练集
 训练集为48万条，特征值有3300个的个贷违约数据集，违约样本：非违约样本=2:100，用随机森林方法找出相关性最高的600个特征值，用lightgbm训练该训练集。
 多次测试后，目前得到的效果最好的参数为：
-lgb = LGBMClassifier(                
+lgb = LGBMClassifier( 
+
         objective='binary', # 二分类问题
         metric='auc', # 评估指标为AUC
         n_estimators=3000, # 减小树的数量
